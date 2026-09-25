@@ -111,8 +111,7 @@ async def test_fetch_fork_status_skips_non_forks_and_builds_compare_url():
     assert fork.parent_full_name == "custom-components/healthchecksio"
     assert fork.behind_count == 3
     assert fork.compare_url == (
-        "https://github.com/custom-components/healthchecksio/compare/"
-        "main...rn-ax:main"
+        "https://github.com/custom-components/healthchecksio/compare/main...rn-ax:main"
     )
 
 
@@ -123,9 +122,7 @@ async def test_fetch_fork_status_skips_fork_with_no_parent_info():
     session = FakeSession(
         {
             ORG_REPOS_URL: FakeResponse(200, repos_payload),
-            "https://api.github.com/repos/rn-ax/weird-fork": FakeResponse(
-                200, detail
-            ),
+            "https://api.github.com/repos/rn-ax/weird-fork": FakeResponse(200, detail),
         }
     )
 

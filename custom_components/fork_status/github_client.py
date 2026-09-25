@@ -97,7 +97,9 @@ async def _compare_ahead_by(
     return data["ahead_by"]
 
 
-async def async_validate_org(session: ClientSession, org: str, token: str | None) -> None:
+async def async_validate_org(
+    session: ClientSession, org: str, token: str | None
+) -> None:
     """Raise GitHubAuthError if `org` isn't a reachable account or the token is bad."""
     await _list_owner_repos(session, org, token)
 

@@ -10,8 +10,6 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .const import ATTRIBUTION
 
 if TYPE_CHECKING:
-    from homeassistant.core import HomeAssistant
-
     from .coordinator import ForkStatusDataUpdateCoordinator
 
 
