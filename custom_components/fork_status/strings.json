@@ -1,0 +1,23 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Fork Status",
+                "description": "Tracks every fork owned by a GitHub organization or user against its upstream parent, one sensor per fork.",
+                "data": {
+                    "org": "GitHub organization or user",
+                    "github_token": "GitHub token (optional -- needed for private forks or to raise the rate limit)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Could not reach that GitHub organization/user, or the token was rejected."
+        }
+    },
+    "issues": {
+        "fork_behind": {
+            "title": "{repo} is behind {parent}",
+            "description": "{repo} is {behind_count} commit(s) behind its upstream parent, {parent}. Review and merge upstream's changes when ready."
+        }
+    }
+}

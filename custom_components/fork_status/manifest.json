@@ -1,0 +1,10 @@
+{
+  "domain": "fork_status",
+  "name": "Fork Status",
+  "codeowners": ["@rutinerad"],
+  "config_flow": true,
+  "documentation": "https://github.com/rn-ax/ha-fork-status",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/rn-ax/ha-fork-status/issues",
+  "version": "0.1.0"
+}
