@@ -22,4 +22,9 @@ jobs:
       contents: read
       pull-requests: write
     uses: rn-ax/poppycock/.github/workflows/ha-integration-ci.yml@main
+    # fork_status has no entry yet in home-assistant/brands -- skip that
+    # check rather than blocking CI on an unrelated community-repo PR.
+    # Requires rn-ax/poppycock#11 (hacs_ignore input) merged to take effect.
+    with:
+      hacs_ignore: brands
     secrets: inherit
