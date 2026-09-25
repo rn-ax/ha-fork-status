@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
-        with:
-          python-version: "3.13"
+      - uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
       - run: uv sync --group dev
       - run: uv run pytest tests/
 
@@ -24,7 +22,6 @@ jobs:
     uses: rn-ax/poppycock/.github/workflows/ha-integration-ci.yml@main
     # fork_status has no entry yet in home-assistant/brands -- skip that
     # check rather than blocking CI on an unrelated community-repo PR.
-    # Requires rn-ax/poppycock#11 (hacs_ignore input) merged to take effect.
     with:
       hacs_ignore: brands
     secrets: inherit

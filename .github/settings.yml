@@ -1,0 +1,6 @@
+_extends: poppycock
+
+repository:
+  name: ha-fork-status
+  description: Home Assistant integration tracking rn-ax's GitHub forks against their upstream parents
+  private: false
