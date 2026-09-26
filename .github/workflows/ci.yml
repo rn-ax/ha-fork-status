@@ -22,6 +22,9 @@ jobs:
     uses: rn-ax/poppycock/.github/workflows/ha-integration-ci.yml@main
     # fork_status has no entry yet in home-assistant/brands -- skip that
     # check rather than blocking CI on an unrelated community-repo PR.
+    # `issues` is skipped org-wide: this org tracks work in atask, not
+    # GitHub Issues, so has_issues stays false everywhere -- HACS's own
+    # check requires it enabled, which isn't a real correctness problem.
     with:
-      hacs_ignore: brands
+      hacs_ignore: brands issues
     secrets: inherit
