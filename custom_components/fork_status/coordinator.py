@@ -9,7 +9,7 @@ from homeassistant.helpers import issue_registry as ir
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .const import DOMAIN, SCAN_INTERVAL
-from .github_client import GitHubAuthError, ForkInfo, async_fetch_fork_status
+from .github_client import ForkInfo, GitHubAuthError, async_fetch_fork_status
 
 if TYPE_CHECKING:
     from aiohttp import ClientSession
