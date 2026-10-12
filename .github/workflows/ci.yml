@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: rn-ax/poppycock/.github/workflows/ha-integration-ci.yml@main
+    uses: rn-ax/poppycock/.github/workflows/ha-integration-ci.yml@ea5fa774dfca1a01ecef65b43d88fbcbb870e893 # main
     # fork_status has no entry yet in home-assistant/brands -- skip that
     # check rather than blocking CI on an unrelated community-repo PR.
     # `issues` is skipped org-wide: this org tracks work in atask, not
